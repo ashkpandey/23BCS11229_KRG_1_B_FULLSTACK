@@ -9,9 +9,14 @@
 </head>
 
 <body>
+
   <div class="container">
+
+    <!-- HEADER -->
     <header>
       <h1>🛒 Product Store</h1>
+
+      <!-- Category Filter -->
       <select id="categoryFilter">
         <option value="all">All Categories</option>
         <option value="electronics">Electronics</option>
@@ -21,10 +26,46 @@
       </select>
     </header>
 
-    <section id="productList" class="products"></section>
+
+    <!-- NEW: Search Bar -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+
+    <!-- NEW: Sort Products -->
+    <div class="sort-box">
+      <label for="sortPrice">Sort by Price:</label>
+      <select id="sortPrice">
+        <option value="none">None</option>
+        <option value="low-high">Low → High</option>
+        <option value="high-low">High → Low</option>
+      </select>
+    </div>
+
+    <!-- NEW: Divider -->
+    <hr>
+
+    <!-- Product List -->
+    <section id="productList" class="products">
+      <!-- JS will insert cards here -->
+    </section>
+
+    <!-- NEW: Loading placeholder -->
+    <p id="loadingText" style="display:none; text-align:center; margin-top:20px;">
+      Loading products...
+    </p>
+
+    <!-- FOOTER -->
+    <footer>
+      <hr>
+      <p style="text-align:center; margin-top:10px;">
+        © 2025 Product Store | Built with HTML, CSS & JavaScript
+      </p>
+    </footer>
+
   </div>
 
   <script src="script.js"></script>
-</body>
 
+</body>
 </html>
